@@ -34,6 +34,7 @@ transform_data_mean <- function(data_new) {  # Change 'data' to 'data_new'
 mean_mtcars <- transform_data_mean(mtcars)
 mean_mtcars  # Display the mean of each numeric column
 
+
 ```
 
 ## Including Plots
@@ -45,3 +46,5 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+My public repository can be found here <https://github.com/helenho-02/public.git>
