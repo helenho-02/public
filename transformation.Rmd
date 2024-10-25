@@ -1,0 +1,47 @@
+---
+title: "transformation"
+author: "Helen Ho"
+date: "2024-10-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+transform_data <- function(data) {
+    data_transformed <- data * 2
+    return(data_transformed)
+}
+
+# Apply the function to the mtcars dataset
+transformed_mtcars <- transform_data(mtcars)
+head(transformed_mtcars)  # Display the first few rows of the transformed dataset
+
+transform_data_mean <- function(data_new) {  # Change 'data' to 'data_new'
+    data_mean <- colMeans(data_new, na.rm = TRUE)
+    return(data_mean)
+}
+
+# Apply the function to the mtcars dataset
+mean_mtcars <- transform_data_mean(mtcars)
+mean_mtcars  # Display the mean of each numeric column
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
