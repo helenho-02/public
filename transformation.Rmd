@@ -25,7 +25,7 @@ transform_data <- function(data) {
 transformed_mtcars <- transform_data(mtcars)
 head(transformed_mtcars)  # Display the first few rows of the transformed dataset
 
-transform_data_mean <- function(data_new) {  # Change 'data' to 'data_new'
+transform_data_mean <- function(data_new) {  
     data_mean <- colMeans(data_new, na.rm = TRUE)
     return(data_mean)
 }
